@@ -170,7 +170,7 @@ def getRandomPipe():
     #Generate positions of two pipes(one bottom straight and one top rotated ) for blitting on the screen
 
     pipeHeight = GAME_SPRITES['pipe'][0].get_height()
-    offset = SCREENHEIGHT/3.5 #The certain amt of space(is futher used to decide how much space we leave for the bird to pass through pipes) --->Increase this to decrease the size of the gas
+    offset = SCREENHEIGHT/3.5#The certain amt of space(is futher used to decide how much space we leave between 2 pair of pipes) --->Increase this to decrease the space between 2 obstacles
     y2 = offset + random.randrange(0, int(SCREENHEIGHT - GAME_SPRITES['base'].get_height()  - 1.2 *offset)) #BottomPipe-->height = offset+randomNumber from 0 to(totalScreen-GroundIMG-alittleMoreSpace than offset)
     pipeX = SCREENWIDTH + 10   #SO pipe is not immediately on screen when game starts we start creating pipes at this distance && X is same for both pipes
     y1 = pipeHeight - y2 + offset
